@@ -6,7 +6,10 @@
    ============================================================================ */
 (function () {
   if (window.__julzReview) return; window.__julzReview = true;
-  if (!(/[?&]review=1/.test(location.search) || /review/i.test(location.hash))) return; /* gated: review tool only with ?review=1 */
+  var __rvQ = /[?&]review=1/.test(location.search) || /review/i.test(location.hash);
+  if (__rvQ) { try{ localStorage.setItem('julz-review-mode','1'); }catch(e){} }
+  var __rvOn = __rvQ || (function(){ try{ return localStorage.getItem('julz-review-mode')==='1'; }catch(e){ return false; } })();
+  if (!__rvOn) return; /* sticky review mode: ?review=1 once -> stays on for this browser; X clears it */
   var KEY = 'julz-comments-v1';
   var AUTHOR = localStorage.getItem('julz-comment-author') || 'Julz';
   var page = location.pathname.replace(/.*\/site\//, '').replace(/^\//, '') || 'index.html';
@@ -196,7 +199,7 @@
     if(navigator.clipboard){ navigator.clipboard.writeText(md).then(function(){ var b=bar.querySelector('.copy'); var o=b.textContent; b.textContent='Copied ✓'; b.classList.add('on'); setTimeout(function(){ b.textContent=o; b.classList.remove('on'); }, 1400); }); }
     else { prompt('Copy your feedback:', md); }
   });
-  bar.querySelector('.eye').addEventListener('click', function(){ bar.style.display='none'; panel.classList.remove('show'); layer.style.display='none'; setMode(false); var r=document.createElement('button'); r.textContent='💬'; r.title='Show review layer'; r.style.cssText='position:fixed;right:18px;bottom:18px;z-index:100000;width:44px;height:44px;border-radius:50%;border:1px solid #2A241D;background:rgba(21,18,15,.92);color:#CDAD7D;font-size:18px;cursor:pointer'; r.onclick=function(){ r.remove(); bar.style.display='flex'; layer.style.display='block'; }; document.body.appendChild(r); });
+  bar.querySelector('.eye').addEventListener('click', function(){ try{ localStorage.removeItem('julz-review-mode'); }catch(e){} bar.style.display='none'; panel.classList.remove('show'); layer.style.display='none'; setMode(false); var r=document.createElement('button'); r.textContent='💬'; r.title='Show review layer'; r.style.cssText='position:fixed;right:18px;bottom:18px;z-index:100000;width:44px;height:44px;border-radius:50%;border:1px solid #2A241D;background:rgba(21,18,15,.92);color:#CDAD7D;font-size:18px;cursor:pointer'; r.onclick=function(){ r.remove(); bar.style.display='flex'; layer.style.display='block'; }; document.body.appendChild(r); });
 
   // ---- init ----
   function init(){ renderPins(); renderPanel(); }

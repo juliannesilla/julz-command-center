@@ -16,35 +16,40 @@
   css.textContent = [
     '.jrv-layer{position:absolute;top:0;left:0;width:100%;z-index:99990;pointer-events:none}',
     '.jrv-pin{position:absolute;transform:translate(-50%,-100%);pointer-events:auto;cursor:pointer;z-index:99991}',
-    '.jrv-pin .dot{width:28px;height:28px;border-radius:50% 50% 50% 2px;background:#CDAD7D;color:#0E0D0C;font:700 13px/28px Arial,sans-serif;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.5),0 0 0 2px rgba(14,13,12,.6);transform:rotate(0);transition:transform .15s}',
+    '.jrv-pin .dot{width:28px;height:28px;border-radius:50% 50% 50% 2px;background:#CDAD7D;color:#0E0D0C;font:700 13px/28px "Cormorant Garamond",Georgia,serif;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.5),0 0 0 2px rgba(14,13,12,.6);transform:rotate(0);transition:transform .15s}',
     '.jrv-pin:hover .dot{transform:scale(1.12)}',
     '.jrv-pin.open .dot{background:#F3E2BE}',
-    '.jrv-pop{position:absolute;top:0;left:50%;transform:translate(-50%,8px);min-width:230px;max-width:300px;background:#15120F;border:1px solid #2A241D;border-radius:12px;box-shadow:0 16px 50px rgba(0,0,0,.6);padding:12px;color:#F0EBE1;font:14px/1.5 Inter,system-ui,sans-serif;pointer-events:auto;z-index:99999}',
-    '.jrv-pop textarea{width:100%;min-height:64px;resize:vertical;background:#0E0D0C;border:1px solid #2A241D;border-radius:8px;color:#F0EBE1;font:14px/1.45 Inter,system-ui,sans-serif;padding:8px;outline:none}',
+    '.jrv-pop{position:absolute;top:0;left:50%;transform:translate(-50%,8px);min-width:230px;max-width:300px;background:#15120F;border:1px solid #2A241D;border-radius:12px;box-shadow:0 16px 50px rgba(0,0,0,.6);padding:12px;color:#F0EBE1;font:14px/1.5 "Cormorant Garamond",Georgia,serif;pointer-events:auto;z-index:99999}',
+    '.jrv-pop textarea{width:100%;min-height:64px;resize:vertical;background:#0E0D0C;border:1px solid #2A241D;border-radius:8px;color:#F0EBE1;font:14px/1.45 "Cormorant Garamond",Georgia,serif;padding:8px;outline:none}',
     '.jrv-pop textarea:focus{border-color:#CDAD7D}',
-    '.jrv-pop .meta{font:600 10px/1 Arial;letter-spacing:.08em;text-transform:uppercase;color:#A99E8E;margin-bottom:8px}',
+    '.jrv-pop .meta{font:600 10px/1 "Cormorant Garamond",Georgia,serif;letter-spacing:.08em;text-transform:uppercase;color:#A99E8E;margin-bottom:8px}',
     '.jrv-pop .body{white-space:pre-wrap;color:#E5E2DD;margin-bottom:10px}',
     '.jrv-row{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}',
-    '.jrv-btn{font:700 11px/1 Arial;letter-spacing:.06em;text-transform:uppercase;padding:8px 12px;border-radius:7px;border:1px solid #2A241D;background:transparent;color:#E5E2DD;cursor:pointer;transition:.2s}',
+    '.jrv-btn{font:700 11px/1 "Cormorant Garamond",Georgia,serif;letter-spacing:.06em;text-transform:uppercase;padding:8px 12px;border-radius:7px;border:1px solid #2A241D;background:transparent;color:#E5E2DD;cursor:pointer;transition:.2s}',
     '.jrv-btn:hover{border-color:#CDAD7D;color:#CDAD7D}',
     '.jrv-btn.pri{background:#CDAD7D;color:#0E0D0C;border-color:#CDAD7D}',
     '.jrv-btn.pri:hover{background:#F3E2BE;color:#0E0D0C}',
     '.jrv-btn.del:hover{border-color:#C98B7A;color:#C98B7A}',
-    '.jrv-bar{position:fixed;right:18px;bottom:18px;z-index:100000;display:flex;gap:8px;align-items:center;font-family:Arial,sans-serif}',
-    '.jrv-bar button{font:700 11px/1 Arial;letter-spacing:.06em;text-transform:uppercase;padding:11px 14px;border-radius:10px;border:1px solid #2A241D;background:rgba(21,18,15,.92);color:#E5E2DD;cursor:pointer;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 8px 26px rgba(0,0,0,.45);transition:.2s}',
+    '.jrv-bar{position:fixed;right:18px;bottom:18px;z-index:100000;display:flex;gap:8px;align-items:center;font-family:"Cormorant Garamond",Georgia,serif}',
+    '.jrv-bar button{font:700 11px/1 "Cormorant Garamond",Georgia,serif;letter-spacing:.06em;text-transform:uppercase;padding:11px 14px;border-radius:10px;border:1px solid #2A241D;background:rgba(21,18,15,.92);color:#E5E2DD;cursor:pointer;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 8px 26px rgba(0,0,0,.45);transition:.2s}',
     '.jrv-bar button:hover{border-color:#CDAD7D;color:#CDAD7D}',
     '.jrv-bar button.on{background:#CDAD7D;color:#0E0D0C;border-color:#CDAD7D}',
     '.jrv-bar .ct{background:#0E0D0C;color:#CDAD7D;border-radius:20px;padding:2px 7px;font-size:10px;margin-left:6px}',
     'body.jrv-mode, body.jrv-mode *{cursor:crosshair!important}',
-    '.jrv-banner{position:fixed;top:0;left:0;right:0;z-index:100001;background:#CDAD7D;color:#0E0D0C;font:700 12px/1 Arial;letter-spacing:.04em;text-align:center;padding:9px;text-transform:uppercase}',
-    '.jrv-panel{position:fixed;right:18px;bottom:72px;z-index:100000;width:330px;max-height:62vh;overflow:auto;background:#15120F;border:1px solid #2A241D;border-radius:14px;box-shadow:0 18px 60px rgba(0,0,0,.6);padding:14px;color:#F0EBE1;font:14px/1.5 Inter,system-ui,sans-serif;display:none}',
+    '.jrv-banner{position:fixed;top:0;left:0;right:0;z-index:100001;background:#CDAD7D;color:#0E0D0C;font:700 12px/1 "Cormorant Garamond",Georgia,serif;letter-spacing:.04em;text-align:center;padding:9px;text-transform:uppercase}',
+    '.jrv-panel{position:fixed;right:18px;bottom:72px;z-index:100000;width:330px;max-height:62vh;overflow:auto;background:#15120F;border:1px solid #2A241D;border-radius:14px;box-shadow:0 18px 60px rgba(0,0,0,.6);padding:14px;color:#F0EBE1;font:14px/1.5 "Cormorant Garamond",Georgia,serif;display:none}',
     '.jrv-panel.show{display:block}',
-    '.jrv-panel h4{font:800 12px/1 Arial;letter-spacing:.14em;text-transform:uppercase;color:#CDAD7D;margin:0 0 10px}',
+    '.jrv-panel h4{font:800 12px/1 "Cormorant Garamond",Georgia,serif;letter-spacing:.14em;text-transform:uppercase;color:#CDAD7D;margin:0 0 10px}',
     '.jrv-item{border-top:1px solid #2A241D;padding:10px 0;cursor:pointer}',
     '.jrv-item:hover{color:#CDAD7D}',
-    '.jrv-item .n{display:inline-block;min-width:20px;height:20px;border-radius:50%;background:#CDAD7D;color:#0E0D0C;font:700 11px/20px Arial;text-align:center;margin-right:8px}',
-    '.jrv-item .pg{font:600 9px/1 Arial;letter-spacing:.08em;text-transform:uppercase;color:#7A7A70;margin-left:28px}',
-    '.jrv-empty{color:#A99E8E;font-style:italic;padding:8px 0}'
+    '.jrv-item .n{display:inline-block;min-width:20px;height:20px;border-radius:50%;background:#CDAD7D;color:#0E0D0C;font:700 11px/20px "Cormorant Garamond",Georgia,serif;text-align:center;margin-right:8px}',
+    '.jrv-item .pg{font:600 9px/1 "Cormorant Garamond",Georgia,serif;letter-spacing:.08em;text-transform:uppercase;color:#7A7A70;margin-left:28px}',
+    '.jrv-empty{color:#A99E8E;font-style:italic;padding:8px 0}',
+    '.jrv-pin.ok .dot{background:#5E8B5E;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.5),0 0 0 2px rgba(94,139,94,.55)}',
+    '.jrv-btn.ok{border-color:#5E8B5E;color:#9CC79C}',
+    '.jrv-btn.ok:hover{background:#5E8B5E;color:#fff;border-color:#5E8B5E}',
+    '.jrv-item .n.okn{background:#5E8B5E;color:#fff}',
+    '.jrv-item.done .tx{color:#8FAF8F;text-decoration:line-through;text-decoration-thickness:1px}'
   ].join('');
   document.head.appendChild(css);
 
@@ -68,9 +73,9 @@
     layer.innerHTML = ''; sizeLayer();
     var list = pageComments(); var w = docW();
     list.forEach(function(c, i){
-      var pin = document.createElement('div'); pin.className = 'jrv-pin';
+      var pin = document.createElement('div'); pin.className = 'jrv-pin' + (c.approved ? ' ok' : '');
       pin.style.left = (c.xPct * w) + 'px'; pin.style.top = c.y + 'px';
-      pin.innerHTML = '<div class="dot">' + (i + 1) + '</div>';
+      pin.innerHTML = '<div class="dot">' + (c.approved ? '✓' : (i + 1)) + '</div>';
       pin.addEventListener('click', function(e){ e.stopPropagation(); showComment(c, pin, i + 1); });
       layer.appendChild(pin);
     });
@@ -82,10 +87,11 @@
     var pop = document.createElement('div'); pop.className = 'jrv-pop';
     pop.innerHTML = '<div class="meta">#' + num + ' · ' + (c.author || 'Julz') + ' · ' + new Date(c.ts).toLocaleString() + '</div>'
       + '<div class="body"></div>'
-      + '<div class="jrv-row"><button class="jrv-btn edit">Edit</button><button class="jrv-btn del">Delete</button></div>';
+      + '<div class="jrv-row"><button class="jrv-btn ok">' + (c.approved ? 'Approved ✓ (undo)' : 'Approve ✓') + '</button><button class="jrv-btn edit">Edit</button><button class="jrv-btn del">Delete</button></div>';
     pop.querySelector('.body').textContent = c.text;
     pop.addEventListener('click', function(e){ e.stopPropagation(); });
-    pop.querySelector('.del').addEventListener('click', function(){ all = all.filter(function(x){ return x.id !== c.id; }); save(all); closePop(); renderPins(); renderPanel(); });
+    pop.querySelector('.del').addEventListener('click', function(){ if(!confirm('Delete this comment?')) return; all = all.filter(function(x){ return x.id !== c.id; }); save(all); closePop(); renderPins(); renderPanel(); });
+    pop.querySelector('.ok').addEventListener('click', function(){ c.approved = !c.approved; save(all); closePop(); renderPins(); renderPanel(); });
     pop.querySelector('.edit').addEventListener('click', function(){ editor(c, pin); });
     pin.appendChild(pop); openPop = pop;
   }
@@ -145,10 +151,11 @@
   function renderPanel(){
     var list = pageComments();
     var total = all.length;
-    var html = '<h4>Comments · this page (' + list.length + ') · all pages (' + total + ')</h4>';
+    var apr = list.filter(function(c){ return c.approved; }).length;
+    var html = '<h4>Comments · this page (' + list.length + ') · approved ' + apr + '/' + list.length + '</h4>';
     if(!list.length) html += '<div class="jrv-empty">No comments on this page yet. Hit “💬 Comment”, then click anywhere.</div>';
     list.forEach(function(c, i){
-      html += '<div class="jrv-item" data-id="' + c.id + '"><span class="n">' + (i+1) + '</span><span class="tx"></span><div class="pg">' + (c.text.length>90?'':'') + '</div></div>';
+      html += '<div class="jrv-item' + (c.approved ? ' done' : '') + '" data-id="' + c.id + '"><span class="n' + (c.approved ? ' okn' : '') + '">' + (c.approved ? '✓' : (i+1)) + '</span><span class="tx"></span><div class="pg">' + (c.text.length>90?'':'') + '</div></div>';
     });
     panel.innerHTML = html;
     list.forEach(function(c, i){
@@ -172,7 +179,7 @@
     Object.keys(byPage).sort().forEach(function(pg){
       out += '## ' + pg + '\n';
       byPage[pg].forEach(function(c, i){
-        out += (i+1) + '. ' + c.text.replace(/\n/g,' ') + '  \n   _(at ' + Math.round(c.xPct*100) + '% across, ' + Math.round(c.y) + 'px down · ' + (c.author||'Julz') + ')_\n';
+        out += (i+1) + '. ' + (c.approved ? '[APPROVED ✓] ' : '[open] ') + c.text.replace(/\n/g,' ') + '  \n   _(at ' + Math.round(c.xPct*100) + '% across, ' + Math.round(c.y) + 'px down · ' + (c.author||'Julz') + ')_\n';
       });
       out += '\n';
     });

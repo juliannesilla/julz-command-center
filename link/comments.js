@@ -6,7 +6,7 @@
    ============================================================================ */
 (function () {
   if (window.__julzReview) return; window.__julzReview = true;
-  var __rvQ = /[?&]review=1/.test(location.search) || /review/i.test(location.hash);
+  var __rvQ = /[?&]review=1/.test(location.search) || location.hash==='#review';
   if (__rvQ) { try{ localStorage.setItem('julz-review-mode','1'); }catch(e){} }
   var __rvOn = __rvQ || (function(){ try{ return localStorage.getItem('julz-review-mode')==='1'; }catch(e){ return false; } })();
   if (!__rvOn) return; /* sticky review mode: ?review=1 once -> stays on for this browser; X clears it */

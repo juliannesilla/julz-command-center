@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Julianne Silla — Marketing Strategist | GTM · AI · UGC</title>
-<meta name="description" content="Julianne Silla — Director-Level Marketing Strategist. Director-level strategy. Creator-speed execution. Portfolio, resume, and contact.">
+<meta name="description" content="Julianne Silla — Director-Level Marketing Strategist. Director-level strategy. Creator-speed&nbsp;execution. Portfolio, resume, and contact.">
 <meta name="theme-color" content="#F7F1E8">
 <meta name="author" content="Julianne Silla">
 <link rel="canonical" href="https://juliannesilla.github.io/julz-command-center/link/">
@@ -75,7 +75,7 @@
   .divider .ln{flex:1;height:1px;background:linear-gradient(90deg,rgba(181,138,84,0),var(--gold) 50%,rgba(181,138,84,0))}
   .divider .st{color:var(--gold);font-size:16px;line-height:1}
   .subtitle{
-    font-family:var(--garamond);font-style:normal;font-weight:600;color:#8A8378;text-transform:uppercase;
+    font-family:var(--garamond);font-style:normal;font-weight:600;color:var(--muted);text-transform:uppercase;
     font-size:clamp(.74rem,3.1vw,.95rem);letter-spacing:.13em;line-height:1.7;
     padding:0 6px;
   }
@@ -100,8 +100,8 @@
     display:inline-flex;align-items:center;align-self:flex-start;gap:13px;
     background:var(--ink);border:1px solid rgba(181,138,84,.85);color:var(--cream);
     font-family:var(--garamond);font-weight:600;text-transform:uppercase;
-    letter-spacing:.30em;padding-left:calc(clamp(20px,5vw,28px) + .30em);
-    font-size:clamp(13px,3.4vw,15px);padding:14px clamp(20px,5vw,28px);
+    letter-spacing:.30em;
+    font-size:clamp(13px,3.4vw,15px);padding:14px clamp(20px,5vw,28px);padding-left:calc(clamp(20px,5vw,28px) + .30em);
     text-decoration:none;transition:background .25s ease,transform .25s ease,box-shadow .25s ease;
   }
   .cta .st{color:var(--gold);font-size:13px}
@@ -124,8 +124,8 @@
   .card .bd{flex:1;min-width:0}
   .card .t{display:block;font-family:var(--serif);font-weight:600;color:var(--ink);
     font-size:clamp(1rem,4.3vw,1.18rem);letter-spacing:.055em;line-height:1.15;text-transform:uppercase}
-  .card .t .soon{font-size:.62em;letter-spacing:.10em;color:var(--gold);font-weight:600}
-  .card .s{display:block;margin-top:3px;font-family:var(--garamond);font-weight:500;color:var(--muted);
+  .card .t .soon{font-size:.62em;letter-spacing:.10em;color:#8a6234;font-weight:600}
+  .card .s{display:block;font-family:var(--garamond);font-weight:500;color:var(--muted);
     font-size:clamp(.92rem,3.7vw,1.05rem);margin-top:2px;line-height:1.25}
   .card .ar{flex:0 0 auto;color:var(--ink);font-size:20px;font-family:var(--garamond);opacity:.8;
     transition:transform .22s ease}
@@ -135,13 +135,6 @@
   a.card:not(.dark):hover .ic{color:var(--gold)}
   a.card:not(.dark):hover .ar{color:var(--cream)}
   a.card:not(.dark):hover .vr{background:rgba(181,138,84,.45)}
-
-  /* dark resume card */
-  .card.dark{background:var(--ink);border-color:rgba(181,138,84,.55)}
-  .card.dark .t{color:var(--cream);letter-spacing:.10em}
-  .card.dark .ic{color:var(--gold)}
-  .card.dark .vr{background:rgba(181,138,84,.45)}
-  .card.dark .ar{color:var(--cream)}
   a.card.dark:hover{box-shadow:0 12px 30px rgba(0,0,0,.34)}
 
   /* contact cards — ink icons */
@@ -149,7 +142,8 @@
   .card.contact .vr{background:rgba(21,17,11,.18)}
 
   /* coming soon — non-interactive */
-  .card.soon-card{opacity:.7;cursor:default}
+  .card.soon-card{cursor:default}
+  .card.soon-card .ic{opacity:.55}
   .card.soon-card .ar{opacity:.35}
 
   /* ---------- footer ---------- */
@@ -161,9 +155,9 @@
   .phone-row .st{color:var(--gold);font-size:15px;line-height:1}
   .phone{font-family:var(--serif);font-weight:500;color:var(--ink);
     font-size:clamp(1.35rem,6.2vw,1.8rem);letter-spacing:.02em;white-space:nowrap;
-    text-decoration:none;padding:0 2px}
+    text-decoration:none;padding:6px 10px;margin:-6px -10px}
   .socials{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin-top:26px}
-  .pill{display:inline-flex;align-items:center;gap:10px;background:var(--ink);border:1px solid rgba(181,138,84,.6);border-radius:11px;color:var(--cream);padding:12px 16px;font-family:var(--garamond);font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:background .22s ease,color .22s ease,transform .22s ease,border-color .22s ease}
+  .pill{display:inline-flex;align-items:center;min-height:44px;gap:10px;background:var(--ink);border:1px solid rgba(181,138,84,.6);border-radius:11px;color:var(--cream);padding:12px 16px;font-family:var(--garamond);font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:background .22s ease,color .22s ease,transform .22s ease,border-color .22s ease}
   .pill svg{width:17px;height:17px;display:block;color:var(--gold);transition:color .22s ease}
   .pill:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);transform:translateY(-2px)}
   .pill:hover svg{color:var(--ink)}
@@ -194,7 +188,7 @@
     </header>
 
     <!-- PHOTO HERO -->
-    <section class="photo reveal" style="animation-delay:.10s" role="img" aria-label="Julianne Silla portrait">
+    <section class="photo reveal" style="animation-delay:.10s">
       <div class="scrim"></div>
       <div class="overlay">
         <p class="tagline">Director-level strategy. Creator-speed execution.</p>
@@ -222,7 +216,7 @@
           <span class="t">Pet UGC Portfolio <span class="soon">(Coming Soon)</span></span>
           <span class="s">Stay tuned for my pet content &amp; collaborations</span>
         </span>
-        <span class="ar">&rarr;</span>
+        
       </div>
 
       <a class="card reveal" style="animation-delay:.28s" href="https://juliannesilla.github.io/julz-command-center/resume.pdf" target="_blank" rel="noopener noreferrer">

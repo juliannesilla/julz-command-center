@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Julianne Silla — Marketing Strategist | GTM · AI · UGC</title>
 <meta name="description" content="Julianne Silla — Director-Level Marketing Strategist. Marketing strategy, conversion storytelling, and creator-minded execution. Portfolio, resume, and contact.">
-<meta name="theme-color" content="#15110B">
+<meta name="theme-color" content="#F7F1E8">
 <meta name="author" content="Julianne Silla">
 <link rel="canonical" href="https://juliannesilla.github.io/julz-command-center/link/">
 <!-- Social share -->
@@ -26,244 +26,177 @@
   *{margin:0;padding:0;box-sizing:border-box}
   :root{
     --cream:#F7F1E8;
-    --warm-white:#FFF9F1;
     --card:#FBF7EF;
     --ink:#15110B;
     --ink-soft:#2a2117;
     --muted:#6f6147;
     --gold:#B58A54;
-    --gold-bright:#C99C62;
     --gold-soft:rgba(181,138,84,.5);
     --serif:'Playfair Display', Georgia, serif;
     --garamond:'Cormorant Garamond', Georgia, serif;
-    --sub-gray:#cfc6ba;            /* muted gray for subtitle on dark bg */
-    --content:560px;               /* wider content column (was 520) */
-    --ease:cubic-bezier(.16,1,.3,1);
+    --page:520px;
   }
   html{-webkit-text-size-adjust:100%}
-
-  /* ---------- full-PAGE fixed portrait background (#4 + #13) ---------- */
   body{
-    color:var(--cream);
+    background:#EADFCB;
+    background:
+      radial-gradient(1200px 600px at 50% -10%, #F2E9D8 0%, #EADFCB 60%, #E4D8C1 100%);
+    color:var(--ink);
     font-family:var(--serif);
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
     min-height:100vh;
-    position:relative;
-    background:#241c14;
   }
-  /* fixed, full-bleed portrait — edge to edge, no narrow band */
-  body::before{
-    content:"";
-    position:fixed;inset:0;z-index:-2;
-    background:#241c14 url("portrait.jpg") no-repeat;
-    background-size:cover;
-    background-position:50% 30%;        /* face reads near the top */
-  }
-  /* warm charcoal overlay so all content stays readable (not pitch black) */
-  body::after{
-    content:"";
-    position:fixed;inset:0;z-index:-1;
-    background:
-      linear-gradient(180deg,
-        rgba(18,14,9,.50) 0%,
-        rgba(20,16,11,.46) 30%,
-        rgba(17,13,8,.62) 72%,
-        rgba(13,10,6,.80) 100%);
-  }
-  @media (max-width:520px){
-    /* iOS perf: fixed bg attachment can stutter — keep cover, drop fixed parallax feel gracefully */
-    body::before{background-attachment:scroll}
-  }
-
   .page{
-    max-width:var(--content);
+    max-width:var(--page);
     margin:0 auto;
+    background:var(--cream);
     min-height:100vh;
-    padding:0;
-    overflow:visible;
+    box-shadow:0 18px 70px rgba(34,24,12,.18);
+    overflow:hidden;
   }
 
   /* ---------- reveal on load ---------- */
-  .reveal{opacity:0;transform:translateY(12px);animation:rise .8s var(--ease) forwards}
+  .reveal{opacity:0;transform:translateY(10px);animation:rise .7s cubic-bezier(.22,.61,.36,1) forwards}
   @keyframes rise{to{opacity:1;transform:none}}
   @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}}
 
-  ::selection{background:var(--gold);color:var(--ink)}
-
-  /* ---------- nameplate (#1 centered, no clip · #2 eyebrow removed) ---------- */
-  .plate{padding:clamp(42px,11vw,68px) clamp(20px,6vw,34px) clamp(14px,4vw,20px);text-align:center}
+  /* ---------- nameplate ---------- */
+  .plate{padding:34px 26px 24px;text-align:center}
+  .eyebrow{
+    font-family:var(--garamond);font-weight:600;color:var(--gold);
+    text-transform:uppercase;letter-spacing:.40em;padding-left:.40em;
+    font-size:clamp(11px,3.1vw,14px);margin-bottom:6px;
+  }
   .name{
-    font-family:var(--serif);font-weight:600;color:var(--warm-white);
-    /* tighter clamp max + negative tracking so it NEVER clips on the right */
-    font-size:clamp(2.1rem,9.6vw,3.4rem);
-    line-height:1.02;letter-spacing:-.005em;
+    font-family:var(--serif);font-weight:600;color:var(--ink);
+    font-size:clamp(2.45rem,11.7vw,4rem);line-height:.98;letter-spacing:.012em;
     white-space:nowrap;
-    text-shadow:0 2px 30px rgba(0,0,0,.5);
   }
   .divider{display:flex;align-items:center;justify-content:center;gap:14px;
-    width:min(76%,360px);margin:clamp(14px,4vw,18px) auto clamp(13px,3.5vw,16px)}
+    width:min(78%,360px);margin:15px auto 13px}
   .divider .ln{flex:1;height:1px;background:linear-gradient(90deg,rgba(181,138,84,0),var(--gold) 50%,rgba(181,138,84,0))}
   .divider .st{color:var(--gold);font-size:16px;line-height:1}
-
-  /* subtitle: ALL CAPS, muted gray, letter-spaced, NON-italic editorial (#3 + #7) */
   .subtitle{
-    font-family:var(--garamond);font-style:normal;font-weight:600;
-    color:var(--sub-gray);
-    text-transform:uppercase;
-    font-size:clamp(.72rem,3vw,.92rem);
-    letter-spacing:.22em;padding-left:.22em;
-    line-height:1.7;
-    max-width:30ch;margin:0 auto;
-    text-shadow:0 1px 14px rgba(0,0,0,.4);
+    font-family:var(--serif);font-style:italic;font-weight:500;color:var(--ink-soft);
+    font-size:clamp(.95rem,4vw,1.18rem);letter-spacing:.01em;line-height:1.35;
+    padding:0 6px;
   }
 
-  /* ---------- hero tagline + CTA (over the photo bg) ---------- */
-  .hero{padding:clamp(26px,7vw,40px) clamp(22px,6vw,34px) clamp(22px,6vw,30px);text-align:center}
+  /* ---------- photo hero ---------- */
+  .photo{
+    position:relative;width:100%;aspect-ratio:5/6;overflow:hidden;
+    background:#241c14 url("portrait.jpg") no-repeat;
+    background-size:cover;
+    background-position:50% 42%;
+  }
+  .scrim{position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(16,12,7,0) 0%, rgba(16,12,7,.10) 42%, rgba(16,12,7,.84) 100%)}
+  .overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;
+    gap:clamp(18px,5vw,28px);padding:0 clamp(22px,6vw,34px) clamp(30px,8vw,42px)}
   .tagline{
-    font-family:var(--serif);font-weight:500;font-style:italic;color:var(--warm-white);
-    font-size:clamp(1.3rem,5.6vw,1.85rem);line-height:1.3;
-    max-width:18ch;margin:0 auto clamp(20px,5vw,26px);
-    text-shadow:0 2px 26px rgba(0,0,0,.55);
-    text-wrap:balance;
+    font-family:var(--serif);font-weight:500;color:var(--cream);
+    font-size:clamp(1.12rem,5vw,1.5rem);line-height:1.34;max-width:62%;
+    text-shadow:0 1px 22px rgba(0,0,0,.45);
   }
   .cta{
-    display:inline-flex;align-items:center;gap:13px;
+    display:inline-flex;align-items:center;align-self:flex-start;gap:13px;
     background:var(--ink);border:1px solid rgba(181,138,84,.85);color:var(--cream);
     font-family:var(--garamond);font-weight:600;text-transform:uppercase;
-    letter-spacing:.28em;
-    font-size:clamp(13px,3.4vw,15px);padding:14px clamp(22px,5vw,30px);
-    padding-left:calc(clamp(22px,5vw,30px) + .28em);
-    text-decoration:none;border-radius:2px;
-    box-shadow:0 10px 30px rgba(0,0,0,.4);
-    transition:background .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);
+    letter-spacing:.30em;padding-left:calc(clamp(20px,5vw,28px) + .30em);
+    font-size:clamp(13px,3.4vw,15px);padding:14px clamp(20px,5vw,28px);
+    text-decoration:none;transition:background .25s ease,transform .25s ease,box-shadow .25s ease;
   }
   .cta .st{color:var(--gold);font-size:13px}
-  .cta:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);transform:translateY(-2px);box-shadow:0 16px 40px rgba(0,0,0,.5)}
-  .cta:hover .st{color:var(--ink)}
-  .cta:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+  .cta:hover{background:#1f1810;transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.32)}
 
-  /* ---------- link cards (#6 dark-on-hover · #8 descriptor below · #9 more contrast) ---------- */
-  .links{display:flex;flex-direction:column;gap:14px;padding:clamp(8px,3vw,14px) clamp(20px,5.5vw,30px) 8px}
+  /* ---------- link cards ---------- */
+  .links{display:flex;flex-direction:column;gap:13px;padding:26px clamp(20px,5.5vw,30px) 6px}
   .card{
     display:flex;align-items:center;gap:16px;
-    background:var(--card);
-    border:1px solid rgba(181,138,84,.7);border-radius:13px;
-    padding:17px 18px;min-height:78px;text-decoration:none;color:var(--ink);
-    box-shadow:0 8px 26px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.4);
-    transition:transform .3s var(--ease),box-shadow .3s var(--ease),
-               border-color .3s var(--ease),background-color .35s var(--ease),color .35s var(--ease);
+    background:var(--card);border:1px solid var(--gold-soft);border-radius:11px;
+    padding:16px 18px;min-height:74px;text-decoration:none;color:var(--ink);
+    transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
     position:relative;
   }
-  .card .ic{width:30px;height:30px;flex:0 0 30px;display:flex;align-items:center;justify-content:center;color:var(--gold);
-    transition:color .35s var(--ease)}
+  a.card:hover{transform:translateY(-2px);border-color:var(--gold);
+    box-shadow:0 10px 26px rgba(120,90,45,.16)}
+  .card .ic{width:30px;height:30px;flex:0 0 30px;display:flex;align-items:center;justify-content:center;color:var(--gold)}
   .card .ic svg{width:100%;height:100%;display:block}
-  .card .vr{width:1px;align-self:stretch;margin:5px 0;background:var(--gold-soft);transition:background .35s var(--ease)}
-  .card .bd{flex:1;min-width:0;display:flex;flex-direction:column}
+  .card .vr{width:1px;align-self:stretch;margin:4px 0;background:var(--gold-soft)}
+  .card .bd{flex:1;min-width:0}
   .card .t{font-family:var(--serif);font-weight:600;color:var(--ink);
-    font-size:clamp(1rem,4.3vw,1.18rem);letter-spacing:.05em;line-height:1.15;text-transform:uppercase;
-    transition:color .35s var(--ease)}
-  .card .t .soon{font-size:.62em;letter-spacing:.10em;color:var(--gold);font-weight:600;transition:color .35s var(--ease)}
-  /* #8 — descriptor clearly on its own line below the title */
-  .card .s{display:block;font-family:var(--garamond);font-weight:500;color:var(--muted);
-    font-size:clamp(.92rem,3.7vw,1.05rem);margin-top:4px;line-height:1.3;
-    transition:color .35s var(--ease)}
+    font-size:clamp(1rem,4.3vw,1.18rem);letter-spacing:.055em;line-height:1.15;text-transform:uppercase}
+  .card .t .soon{font-size:.62em;letter-spacing:.10em;color:var(--gold);font-weight:600}
+  .card .s{font-family:var(--garamond);font-weight:500;color:var(--muted);
+    font-size:clamp(.92rem,3.7vw,1.05rem);margin-top:2px;line-height:1.25}
   .card .ar{flex:0 0 auto;color:var(--ink);font-size:20px;font-family:var(--garamond);opacity:.8;
-    transition:transform .3s var(--ease),color .35s var(--ease)}
+    transition:transform .22s ease}
+  a.card:hover .ar{transform:translateX(4px)}
 
-  /* #6 — every card transitions to charcoal on HOVER */
-  a.card:hover{
-    background-color:var(--ink);
-    border-color:rgba(181,138,84,.6);
-    color:var(--cream);
-    transform:translateY(-3px);
-    box-shadow:0 16px 40px rgba(0,0,0,.5);
-  }
-  a.card:hover .t{color:var(--warm-white)}
-  a.card:hover .s{color:rgba(247,241,232,.72)}
-  a.card:hover .ic{color:var(--gold-bright)}
-  a.card:hover .t .soon{color:var(--gold-bright)}
-  a.card:hover .vr{background:rgba(181,138,84,.55)}
-  a.card:hover .ar{color:var(--gold-bright);transform:translateX(5px)}
-  a.card:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
-
-  /* resume card ships pre-dark (the original "black card" reference) */
-  .card.dark{background:var(--ink);border-color:rgba(181,138,84,.55);color:var(--cream);
-    box-shadow:0 10px 30px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.06)}
-  .card.dark .t{color:var(--warm-white);letter-spacing:.09em}
-  .card.dark .ic{color:var(--gold-bright)}
+  /* dark resume card */
+  .card.dark{background:var(--ink);border-color:rgba(181,138,84,.55)}
+  .card.dark .t{color:var(--cream);letter-spacing:.10em}
+  .card.dark .ic{color:var(--gold)}
   .card.dark .vr{background:rgba(181,138,84,.45)}
   .card.dark .ar{color:var(--cream)}
-  a.card.dark:hover{background-color:#0e0b07;box-shadow:0 18px 44px rgba(0,0,0,.6)}
-  a.card.dark:hover .ar{color:var(--gold-bright)}
+  a.card.dark:hover{box-shadow:0 12px 30px rgba(0,0,0,.34)}
 
-  /* coming soon — non-interactive (no hover state) */
-  .card.soon-card{opacity:.8;cursor:default}
+  /* contact cards — ink icons */
+  .card.contact .ic{color:var(--ink)}
+  .card.contact .vr{background:rgba(21,17,11,.18)}
+
+  /* coming soon — non-interactive */
+  .card.soon-card{opacity:.7;cursor:default}
   .card.soon-card .ar{opacity:.35}
 
   /* ---------- footer ---------- */
-  .foot{padding:clamp(26px,7vw,36px) clamp(20px,5.5vw,30px) clamp(40px,9vw,52px);text-align:center}
-  .phone-row{display:flex;align-items:center;justify-content:center;gap:14px;width:100%;max-width:430px;margin:8px auto 0}
+  .foot{padding:30px clamp(20px,5.5vw,30px) 40px;text-align:center}
+  .phone-row{display:flex;align-items:center;justify-content:center;gap:14px;width:100%;max-width:420px;margin:8px auto 0}
   .phone-row .hl{flex:1;height:1px}
   .phone-row .hl.l{background:linear-gradient(90deg,rgba(181,138,84,0),var(--gold))}
   .phone-row .hl.r{background:linear-gradient(90deg,var(--gold),rgba(181,138,84,0))}
   .phone-row .st{color:var(--gold);font-size:15px;line-height:1}
-  .phone{font-family:var(--serif);font-weight:500;color:var(--warm-white);
+  .phone{font-family:var(--serif);font-weight:500;color:var(--ink);
     font-size:clamp(1.35rem,6.2vw,1.8rem);letter-spacing:.02em;white-space:nowrap;
-    text-decoration:none;padding:0 2px;text-shadow:0 1px 16px rgba(0,0,0,.5);
-    transition:color .25s var(--ease)}
-  .phone:hover{color:var(--gold-bright)}
-
-  /* ---------- socials: icon-FIRST pills, gold/charcoal CTA aesthetic (#12) ---------- */
-  .socials{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
-    gap:clamp(10px,2.6vw,14px);margin-top:clamp(24px,6vw,30px)}
-  .soc{
-    display:inline-flex;align-items:center;gap:9px;
-    background:rgba(20,16,11,.55);
-    border:1px solid rgba(181,138,84,.7);border-radius:999px;
-    padding:9px 16px 9px 13px;
-    color:var(--cream);text-decoration:none;
-    font-family:var(--garamond);font-weight:600;text-transform:uppercase;
-    letter-spacing:.16em;font-size:clamp(11px,2.9vw,12.5px);
-    -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);
-    box-shadow:0 6px 18px rgba(0,0,0,.32);
-    transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease);
-  }
-  .soc .sic{width:18px;height:18px;flex:0 0 18px;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);
-    transition:color .3s var(--ease)}
-  .soc .sic svg{width:100%;height:100%;display:block}
-  .soc .lbl{padding-top:1px}
-  .soc:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.45)}
-  .soc:hover .sic{color:var(--ink)}
-  .soc:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
-
-  /* #10 + #11 — footer tagline: two bold lines */
-  .foot .tag{margin-top:clamp(28px,7vw,34px);font-family:var(--garamond);font-weight:700;text-transform:uppercase;
-    color:var(--warm-white);font-size:clamp(.98rem,4.3vw,1.2rem);letter-spacing:.18em;padding-left:.18em;line-height:1.6;
-    text-shadow:0 1px 16px rgba(0,0,0,.5)}
+    text-decoration:none;padding:0 2px}
+  .socials{display:flex;align-items:center;justify-content:center;gap:clamp(20px,6vw,34px);margin-top:26px}
+  .circle{width:clamp(52px,14vw,62px);height:clamp(52px,14vw,62px);border-radius:50%;
+    border:1.5px solid rgba(21,17,11,.7);display:flex;align-items:center;justify-content:center;
+    color:var(--ink);transition:border-color .22s ease,background .22s ease,color .22s ease,transform .22s ease}
+  .circle svg{width:46%;height:46%;display:block}
+  .circle:hover{border-color:var(--gold);background:var(--gold);color:var(--cream);transform:translateY(-2px)}
+  .foot .tag{margin-top:30px;font-family:var(--garamond);font-weight:600;text-transform:uppercase;
+    color:var(--ink);font-size:clamp(.95rem,4.2vw,1.18rem);letter-spacing:.18em;padding-left:.18em;line-height:1.5}
   .foot .botstar{margin-top:18px;color:var(--gold);font-size:18px;line-height:1}
+
+  @media (max-width:520px){ .page{box-shadow:none} }
 </style>
 </head>
 <body>
   <main class="page">
 
-    <!-- NAMEPLATE (eyebrow removed) -->
+    <!-- NAMEPLATE -->
     <header class="plate reveal" style="animation-delay:.02s">
+      <div class="eyebrow">Strategy &bull; Growth &bull; Impact</div>
       <h1 class="name">JULIANNE SILLA</h1>
       <div class="divider"><span class="ln"></span><span class="st">&#10022;</span><span class="ln"></span></div>
-      <p class="subtitle">Director of Marketing&nbsp;|&nbsp;GTM Engineer&nbsp;|&nbsp;AI &amp; Automation&nbsp;|&nbsp;Conversion Copywriter&nbsp;|&nbsp;UGC</p>
+      <p class="subtitle">Director-Level Marketing Strategist&nbsp;|&nbsp;GTM&nbsp;|&nbsp;AI&nbsp;|&nbsp;UGC</p>
     </header>
 
-    <!-- HERO TAGLINE + CTA (over full-page portrait bg) -->
-    <section class="hero reveal" style="animation-delay:.12s">
-      <p class="tagline">I turn chaos into clarity, and clarity into revenue.</p>
-      <a class="cta" href="https://www.juliannesilla.com" target="_blank" rel="noopener noreferrer">View My Work&nbsp;<span class="st">&#10022;</span></a>
+    <!-- PHOTO HERO -->
+    <section class="photo reveal" style="animation-delay:.10s" role="img" aria-label="Julianne Silla portrait">
+      <div class="scrim"></div>
+      <div class="overlay">
+        <p class="tagline">Marketing strategy, conversion storytelling, and creator-minded execution.</p>
+        <a class="cta" href="https://www.juliannesilla.com" target="_blank" rel="noopener noreferrer">View My Work&nbsp;<span class="st">&#10022;</span></a>
+      </div>
     </section>
 
     <!-- LINK CARDS -->
     <nav class="links" aria-label="Links">
 
-      <a class="card reveal" style="animation-delay:.18s" href="https://www.juliannesilla.com" target="_blank" rel="noopener noreferrer">
+      <a class="card reveal" style="animation-delay:.16s" href="https://www.juliannesilla.com" target="_blank" rel="noopener noreferrer">
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 20v-5"/><path d="M11 20v-8"/><path d="M16 20v-4.2"/><path d="M20.5 20V8.5"/><path d="M5 11l5-4 4 2.6L21 3"/><path d="M21 7.2V3h-4.2"/></svg></span>
         <span class="vr"></span>
         <span class="bd">
@@ -273,7 +206,7 @@
         <span class="ar">&rarr;</span>
       </a>
 
-      <div class="card soon-card reveal" style="animation-delay:.24s" aria-disabled="true">
+      <div class="card soon-card reveal" style="animation-delay:.22s" aria-disabled="true">
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.4c.92 5.75 3.45 8.28 9.2 9.2-5.75.92-8.28 3.45-9.2 9.2-.92-5.75-3.45-8.28-9.2-9.2 5.75-.92 8.28-3.45 9.2-9.2z"/></svg></span>
         <span class="vr"></span>
         <span class="bd">
@@ -283,17 +216,16 @@
         <span class="ar">&rarr;</span>
       </div>
 
-      <a class="card dark reveal" style="animation-delay:.30s" href="https://juliannesilla.github.io/julz-command-center/resume.pdf" target="_blank" rel="noopener noreferrer">
+      <a class="card dark reveal" style="animation-delay:.28s" href="https://juliannesilla.github.io/julz-command-center/resume.pdf" target="_blank" rel="noopener noreferrer">
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2.5h7l5 5V21a.5.5 0 0 1-.5.5H6.5A.5.5 0 0 1 6 21V3a.5.5 0 0 1 .5-.5z"/><path d="M13 2.6V8h5"/><path d="M9 13h6"/><path d="M9 16.4h6"/><path d="M9 9.6h2.2"/></svg></span>
         <span class="vr"></span>
         <span class="bd">
           <span class="t">Download Resume</span>
-          <span class="s">Get my latest CV (PDF)</span>
         </span>
         <span class="ar">&rarr;</span>
       </a>
 
-      <a class="card reveal" style="animation-delay:.36s" href="mailto:julianne.mktg@gmail.com">
+      <a class="card contact reveal" style="animation-delay:.34s" href="mailto:julianne.mktg@gmail.com">
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.3"/><path d="M3.3 6.6l8.7 6 8.7-6"/></svg></span>
         <span class="vr"></span>
         <span class="bd">
@@ -303,7 +235,7 @@
         <span class="ar">&rarr;</span>
       </a>
 
-      <a class="card reveal" style="animation-delay:.42s" href="https://www.linkedin.com/in/juliannesilla-m" target="_blank" rel="noopener noreferrer">
+      <a class="card contact reveal" style="animation-delay:.40s" href="https://www.linkedin.com/in/juliannesilla-m" target="_blank" rel="noopener noreferrer">
         <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 0 .02 5 2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.3c0-1.26-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21h-4z"/></svg></span>
         <span class="vr"></span>
         <span class="bd">
@@ -316,7 +248,7 @@
     </nav>
 
     <!-- FOOTER -->
-    <footer class="foot reveal" style="animation-delay:.48s">
+    <footer class="foot reveal" style="animation-delay:.46s">
       <div class="phone-row">
         <span class="hl l"></span>
         <span class="st">&#10022;</span>
@@ -326,25 +258,21 @@
       </div>
 
       <div class="socials">
-        <a class="soc" href="https://instagram.com/geezjulz" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <span class="sic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.7" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></span>
-          <span class="lbl">Instagram</span>
+        <a class="circle" href="https://instagram.com/geezjulz" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.7" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg>
         </a>
-        <a class="soc" href="https://tiktok.com/@geezjulz" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-          <span class="sic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.7 2h-2.9v12.2a2.55 2.55 0 1 1-2.05-2.5V8.78a5.45 5.45 0 1 0 4.95 5.42V8.4a6.65 6.65 0 0 0 3.95 1.29V6.78A3.86 3.86 0 0 1 16.7 2z"/></svg></span>
-          <span class="lbl">TikTok</span>
+        <a class="circle" href="https://tiktok.com/@geezjulz" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.7 2h-2.9v12.2a2.55 2.55 0 1 1-2.05-2.5V8.78a5.45 5.45 0 1 0 4.95 5.42V8.4a6.65 6.65 0 0 0 3.95 1.29V6.78A3.86 3.86 0 0 1 16.7 2z"/></svg>
         </a>
-        <a class="soc" href="https://wa.me/16507590995" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-          <span class="sic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.004c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.04 20.15h-.003a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.83 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01s-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg></span>
-          <span class="lbl">WhatsApp</span>
+        <a class="circle" href="https://wa.me/16507590995" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.004c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.04 20.15h-.003a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.83 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01s-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
         </a>
-        <a class="soc" href="mailto:julianne.mktg@gmail.com" aria-label="Email">
-          <span class="sic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="2.6" y="5" width="18.8" height="14" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.2 6.6l8.8 6 8.8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
-          <span class="lbl">Email</span>
+        <a class="circle" href="mailto:julianne.mktg@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="2.6" y="5" width="18.8" height="14" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.2 6.6l8.8 6 8.8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></svg>
         </a>
       </div>
 
-      <p class="tag">Strategy that converts.<br>Stories that resonate.</p>
+      <p class="tag">Strategy That Connects.<br>Stories That Convert.</p>
       <div class="botstar">&#10022;</div>
     </footer>
 

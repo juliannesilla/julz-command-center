@@ -8,13 +8,13 @@ const EXPECTED_HREFS = [
   'https://www.juliannesilla.com',
   'https://www.juliannesilla.com',
   'https://juliannesilla.github.io/julz-command-center/resume.pdf',
-  'mailto:julianne.mktg@gmail.com',
+  'mailto:julianne.partnerships@gmail.com', // partnerships inbox per Julz 2026-06-11
   'https://www.linkedin.com/in/juliannesilla-m',
   'tel:+16507590995',
   'https://instagram.com/geezjulz',
   'https://tiktok.com/@geezjulz',
   'https://wa.me/16507590995',
-  'mailto:julianne.mktg@gmail.com',
+  'mailto:julianne.partnerships@gmail.com',
 ];
 const BRAND_FONTS = ['Playfair Display', 'Cormorant Garamond'];
 

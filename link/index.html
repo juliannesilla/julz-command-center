@@ -124,7 +124,7 @@
   .card .bd{flex:1;min-width:0}
   .card .t{display:block;font-family:var(--serif);font-weight:600;color:var(--ink);
     font-size:clamp(1rem,4.3vw,1.18rem);letter-spacing:.055em;line-height:1.15;text-transform:uppercase}
-  .card .t .soon{font-size:.62em;letter-spacing:.10em;color:#8a6234;font-weight:600}
+  .card .t .soon{font-size:.62em;letter-spacing:.10em;color:#8a6234;font-weight:600;white-space:nowrap}
   .card .s{display:block;font-family:var(--garamond);font-weight:500;color:var(--muted);
     font-size:clamp(.92rem,3.7vw,1.05rem);margin-top:2px;line-height:1.25}
   .card .ar{flex:0 0 auto;color:var(--ink);font-size:20px;font-family:var(--garamond);opacity:.8;
@@ -166,7 +166,7 @@
   .foot .botstar{margin-top:18px;color:var(--gold);font-size:18px;line-height:1}
 
   @media (max-width:720px){ .page{box-shadow:none} }
-  @media (max-width:560px){ .photo{aspect-ratio:4/5;background-position:50% 38%} }
+  @media (max-width:560px){ .photo{aspect-ratio:1/1;background-image:url("hero-mobile.jpg");background-position:50% 50%} }
   @media (min-width:561px){
     .photo{background-image:url("hero-wide.jpg");background-position:50% 50%;aspect-ratio:16/9}
     .scrim{background:linear-gradient(270deg, rgba(42,42,45,.86) 0%, rgba(42,42,45,.52) 30%, rgba(42,42,45,.16) 54%, rgba(42,42,45,0) 74%)}

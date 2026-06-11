@@ -13,7 +13,7 @@ export default defineConfig({
   },
   use: { baseURL: 'http://127.0.0.1:8390' },
   projects: [
-    { name: 'desktop', use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 800 } } },
+    { name: 'desktop', use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 1500 } /* tall: rect assertions need unzoomed layout (auto-fit zooms shorter viewports) */ } },
     { name: 'mobile',  use: { ...devices['Desktop Chrome'], viewport: { width: 390,  height: 844 } } },
   ],
 });

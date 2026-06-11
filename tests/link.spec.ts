@@ -52,13 +52,20 @@ test('subtitle is bold dark gray, non-italic', async ({ page }) => {
   await expect(subtitle).toHaveCSS('font-style', 'normal');
 });
 
-test('subtitle renders on a single line (desktop)', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'desktop', 'one-line rule is desktop-only');
-  const lines = await page.locator('.subtitle').evaluate((el) => {
-    const lh = parseFloat(getComputedStyle(el).lineHeight);
-    return Math.round(el.getBoundingClientRect().height / lh);
-  });
-  expect(lines).toBe(1);
+test('subtitle is two hierarchy lines at readable size (desktop)', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop', 'hierarchy split is desktop-spec');
+  await expect(page.locator('.subtitle .sl')).toHaveCount(2);
+  const px = await page.locator('.subtitle').evaluate((el) => parseFloat(getComputedStyle(el).fontSize));
+  expect(px).toBeGreaterThanOrEqual(12);
+});
+
+test('full page length fits a 1080p viewport at 100% zoom', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop', 'auto-fit is desktop-only');
+  await page.setViewportSize({ width: 1920, height: 940 });
+  await page.reload();
+  await expect(page.locator('.foot .tag')).toBeVisible();
+  const fits = await page.evaluate(() => document.documentElement.scrollHeight <= window.innerHeight + 2);
+  expect(fits).toBe(true);
 });
 
 test('hero uses the right crop and ratio per viewport', async ({ page }, testInfo) => {

@@ -46,7 +46,7 @@
     text-rendering:optimizeLegibility;
     min-height:100vh;
   }
-  body::before{content:'';position:fixed;inset:-30px;z-index:-2;background:url("backdrop.jpg") center/cover no-repeat;filter:blur(9px) saturate(.55) grayscale(.3);}
+  body::before{content:'';position:fixed;inset:-30px;z-index:-2;background:url("backdrop.jpg") center/cover no-repeat;filter:blur(3px) saturate(.6) grayscale(.25);}
   body::after{content:'';position:fixed;inset:0;z-index:-1;background:rgba(112,112,115,.55);}
   .page{position:relative;z-index:1;
     max-width:var(--page);
@@ -76,7 +76,7 @@
   .divider .st{color:var(--gold);font-size:16px;line-height:1}
   .subtitle{
     font-family:var(--garamond);font-style:normal;font-weight:700;color:#4b463c;text-transform:uppercase;
-    font-size:clamp(.74rem,3.1vw,.95rem);letter-spacing:.13em;line-height:1.7;
+    font-size:clamp(.82rem,2.1vw,1.04rem);letter-spacing:.12em;line-height:1.6;
     padding:0 6px;
   }
 
@@ -171,9 +171,9 @@
     .photo{background-image:url("hero-wide.jpg");background-position:50% 50%;aspect-ratio:16/9}
     .scrim{background:linear-gradient(270deg, rgba(42,42,45,.86) 0%, rgba(42,42,45,.52) 30%, rgba(42,42,45,.16) 54%, rgba(42,42,45,0) 74%)}
     .overlay{justify-content:flex-end;align-items:flex-end;text-align:left;padding-bottom:clamp(20px,3vw,34px)}
-    .subtitle{white-space:nowrap;font-size:clamp(.58rem,1.36vw,.73rem);letter-spacing:.08em}
+    .sl{display:block}
     .tagline{max-width:46%}
-    .cta{align-self:flex-end}
+    .obox{display:flex;flex-direction:column;align-items:flex-start;gap:clamp(16px,4vw,24px)}
   }
 </style>
 </head>
@@ -185,15 +185,15 @@
       
       <h1 class="name">JULIANNE SILLA</h1>
       <div class="divider"><span class="ln"></span><span class="st">&#10022;</span><span class="ln"></span></div>
-      <p class="subtitle">DIRECTOR OF MARKETING&nbsp;|&nbsp;GTM ENGINEER&nbsp;|&nbsp;AI &amp; AUTOMATION&nbsp;|&nbsp;CONVERSION COPYWRITER&nbsp;|&nbsp;UGC</p>
+      <p class="subtitle"><span class="sl">DIRECTOR OF MARKETING&nbsp;|&nbsp;GTM ENGINEER&nbsp;|&nbsp;AI &amp; AUTOMATION</span><span class="sl">CONVERSION COPYWRITER&nbsp;|&nbsp;UGC</span></p>
     </header>
 
     <!-- PHOTO HERO -->
     <section class="photo reveal" style="animation-delay:.10s">
       <div class="scrim"></div>
       <div class="overlay">
-        <p class="tagline">Director-level strategy. Creator-speed execution.</p>
-        <a class="cta" href="https://www.juliannesilla.com" target="_blank" rel="noopener noreferrer">View My Work&nbsp;<span class="st">&#10022;</span></a>
+        <div class="obox"><p class="tagline">Director-level strategy. Creator-speed&nbsp;execution.</p>
+        <a class="cta" href="https://www.juliannesilla.com" target="_blank" rel="noopener noreferrer">View My Work&nbsp;<span class="st">&#10022;</span></a></div>
       </div>
     </section>
 
@@ -274,5 +274,6 @@
 
   </main>
   <script src="comments.js" defer></script>
+<script>(function(){function fit(){var b=document.body;if(window.innerWidth<900){b.style.zoom='';return;}b.style.zoom='';var h=b.scrollHeight;var z=Math.min(1,window.innerHeight/h);b.style.zoom=(z<0.995)?z:'';}window.addEventListener('load',fit);window.addEventListener('resize',fit);document.addEventListener('DOMContentLoaded',fit);})();</script>
 </body>
 </html>

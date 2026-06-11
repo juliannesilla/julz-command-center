@@ -63,7 +63,7 @@
   @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}}
 
   /* ---------- nameplate ---------- */
-  .plate{padding:34px 26px 24px;text-align:center}
+  .plate{padding:22px 26px 16px;text-align:center}
 
   .name{
     font-family:var(--serif);font-weight:600;color:var(--ink);
@@ -75,7 +75,7 @@
   .divider .ln{flex:1;height:1px;background:linear-gradient(90deg,rgba(181,138,84,0),var(--gold) 50%,rgba(181,138,84,0))}
   .divider .st{color:var(--gold);font-size:16px;line-height:1}
   .subtitle{
-    font-family:var(--garamond);font-style:normal;font-weight:600;color:var(--muted);text-transform:uppercase;
+    font-family:var(--garamond);font-style:normal;font-weight:700;color:#4b463c;text-transform:uppercase;
     font-size:clamp(.74rem,3.1vw,.95rem);letter-spacing:.13em;line-height:1.7;
     padding:0 6px;
   }
@@ -108,17 +108,17 @@
   .cta:hover{background:#1f1810;transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,0,0,.32)}
 
   /* ---------- link cards ---------- */
-  .links{display:flex;flex-direction:column;gap:13px;padding:26px clamp(20px,5.5vw,30px) 6px}
+  .links{display:flex;flex-direction:column;gap:10px;padding:18px clamp(20px,5.5vw,30px) 4px}
   .card{
     display:flex;align-items:center;gap:16px;
     background:var(--card);border:1px solid var(--gold-soft);border-radius:11px;
-    padding:16px 18px;min-height:74px;text-decoration:none;color:var(--ink);
+    padding:13px 16px;min-height:62px;text-decoration:none;color:var(--ink);
     transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease;
     position:relative;
   }
   a.card:not(.dark):hover{transform:translateY(-2px);background:var(--ink);border-color:var(--ink);
     box-shadow:0 10px 26px rgba(120,90,45,.16)}
-  .card .ic{width:30px;height:30px;flex:0 0 30px;display:flex;align-items:center;justify-content:center;color:var(--gold)}
+  .card .ic{width:30px;height:30px;flex:0 0 30px;display:flex;align-items:center;justify-content:center;color:var(--ink)}
   .card .ic svg{width:100%;height:100%;display:block}
   .card .vr{width:1px;align-self:stretch;margin:4px 0;background:var(--gold-soft)}
   .card .bd{flex:1;min-width:0}
@@ -147,7 +147,7 @@
   .card.soon-card .ar{opacity:.35}
 
   /* ---------- footer ---------- */
-  .foot{padding:30px clamp(20px,5.5vw,30px) 40px;text-align:center}
+  .foot{padding:22px clamp(20px,5.5vw,30px) 28px;text-align:center}
   .phone-row{display:flex;align-items:center;justify-content:center;gap:14px;width:100%;max-width:420px;margin:8px auto 0}
   .phone-row .hl{flex:1;height:1px}
   .phone-row .hl.l{background:linear-gradient(90deg,rgba(181,138,84,0),var(--gold))}
@@ -156,21 +156,22 @@
   .phone{font-family:var(--serif);font-weight:500;color:var(--ink);
     font-size:clamp(1.35rem,6.2vw,1.8rem);letter-spacing:.02em;white-space:nowrap;
     text-decoration:none;padding:6px 10px;margin:-6px -10px}
-  .socials{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin-top:26px}
-  .pill{display:inline-flex;align-items:center;min-height:44px;gap:10px;background:var(--ink);border:1px solid rgba(181,138,84,.6);border-radius:11px;color:var(--cream);padding:12px 16px;font-family:var(--garamond);font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:background .22s ease,color .22s ease,transform .22s ease,border-color .22s ease}
+  .socials{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin-top:18px}
+  .pill{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;gap:10px;background:var(--ink);border:1px solid rgba(181,138,84,.6);border-radius:11px;color:var(--cream);padding:12px;font-family:var(--garamond);font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:background .22s ease,color .22s ease,transform .22s ease,border-color .22s ease}
   .pill svg{width:17px;height:17px;display:block;color:var(--gold);transition:color .22s ease}
   .pill:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);transform:translateY(-2px)}
   .pill:hover svg{color:var(--ink)}
-  .foot .tag{margin-top:30px;font-family:var(--garamond);font-weight:700;text-transform:uppercase;
+  .foot .tag{margin-top:20px;font-family:var(--garamond);font-weight:700;text-transform:uppercase;
     color:var(--ink);font-size:clamp(.95rem,4.2vw,1.18rem);letter-spacing:.18em;padding-left:.18em;line-height:1.5}
   .foot .botstar{margin-top:18px;color:var(--gold);font-size:18px;line-height:1}
 
   @media (max-width:720px){ .page{box-shadow:none} }
   @media (max-width:560px){ .photo{aspect-ratio:4/5;background-position:50% 38%} }
   @media (min-width:561px){
-    .photo{background-image:url("hero-wide.jpg");background-position:50% 18%;aspect-ratio:4/3}
+    .photo{background-image:url("hero-wide.jpg");background-position:50% 50%;aspect-ratio:16/9}
     .scrim{background:linear-gradient(270deg, rgba(42,42,45,.86) 0%, rgba(42,42,45,.52) 30%, rgba(42,42,45,.16) 54%, rgba(42,42,45,0) 74%)}
-    .overlay{justify-content:flex-end;align-items:flex-end;text-align:right;padding-bottom:clamp(26px,4vw,44px)}
+    .overlay{justify-content:flex-end;align-items:flex-end;text-align:left;padding-bottom:clamp(20px,3vw,34px)}
+    .subtitle{white-space:nowrap;font-size:clamp(.58rem,1.36vw,.73rem);letter-spacing:.08em}
     .tagline{max-width:46%}
     .cta{align-self:flex-end}
   }
@@ -261,10 +262,10 @@
       </div>
 
       <div class="socials">
-        <a class="pill" href="https://instagram.com/geezjulz" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.7" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg><span>Instagram</span></a>
-        <a class="pill" href="https://tiktok.com/@geezjulz" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.7 2h-2.9v12.2a2.55 2.55 0 1 1-2.05-2.5V8.78a5.45 5.45 0 1 0 4.95 5.42V8.4a6.65 6.65 0 0 0 3.95 1.29V6.78A3.86 3.86 0 0 1 16.7 2z"/></svg><span>TikTok</span></a>
-        <a class="pill" href="https://wa.me/16507590995" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.004c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.04 20.15h-.003a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.83 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24z"/></svg><span>WhatsApp</span></a>
-        <a class="pill" href="mailto:julianne.mktg@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none"><rect x="2.6" y="5" width="18.8" height="14" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.2 6.6l8.8 6 8.8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></svg><span>Email</span></a>
+        <a class="pill" href="https://instagram.com/geezjulz" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.7" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg></a>
+        <a class="pill" href="https://tiktok.com/@geezjulz" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.7 2h-2.9v12.2a2.55 2.55 0 1 1-2.05-2.5V8.78a5.45 5.45 0 1 0 4.95 5.42V8.4a6.65 6.65 0 0 0 3.95 1.29V6.78A3.86 3.86 0 0 1 16.7 2z"/></svg></a>
+        <a class="pill" href="https://wa.me/16507590995" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.004c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.02zM12.04 20.15h-.003a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.83 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.24-8.24 8.24z"/></svg></a>
+        <a class="pill" href="mailto:julianne.mktg@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none"><rect x="2.6" y="5" width="18.8" height="14" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.2 6.6l8.8 6 8.8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></svg></a>
       </div>
 
       <p class="tag">Strategy That Converts.<br>Stories That Resonate.</p>

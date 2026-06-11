@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 const LINK = '/link/';
-const SUBTITLE_COLOR = 'rgb(75, 70, 60)';
+const SUBTITLE_COLOR = 'rgb(59, 54, 44)'; // darkened per Julz 2026-06-11 (was 75,70,60)
 const INK = 'rgb(21, 17, 11)';
 const GOLD = 'rgb(181, 138, 84)';
 const EXPECTED_HREFS = [

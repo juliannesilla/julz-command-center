@@ -74,6 +74,7 @@
     width:min(78%,360px);margin:15px auto 13px}
   .divider .ln{flex:1;height:1px;background:linear-gradient(90deg,rgba(181,138,84,0),var(--gold) 50%,rgba(181,138,84,0))}
   .divider .st{color:var(--gold);font-size:16px;line-height:1}
+    .sl{display:block}
   .subtitle{
     font-family:var(--garamond);font-style:normal;font-weight:700;color:#4b463c;text-transform:uppercase;
     font-size:clamp(.82rem,2.1vw,1.04rem);letter-spacing:.12em;line-height:1.6;
@@ -274,6 +275,6 @@
 
   </main>
   <script src="comments.js" defer></script>
-<script>(function(){function fit(){var b=document.body;if(window.innerWidth<900){b.style.zoom='';return;}b.style.zoom='';var h=b.scrollHeight;var z=Math.min(1,window.innerHeight/h);b.style.zoom=(z<0.995)?z:'';}window.addEventListener('load',fit);window.addEventListener('resize',fit);document.addEventListener('DOMContentLoaded',fit);})();</script>
+<script>(function(){function fit(){var b=document.body;var rv=false;try{rv=localStorage.getItem('julz-review-mode')==='1';}catch(e){}if(window.innerWidth<900||rv){b.style.zoom='';return;}b.style.zoom='';var h=b.scrollHeight;var z=Math.min(1,(window.innerHeight-6)/h);b.style.zoom=(z>=0.70&&z<0.995)?z:'';}window.addEventListener('load',fit);window.addEventListener('resize',fit);document.addEventListener('DOMContentLoaded',fit);})();</script>
 </body>
 </html>

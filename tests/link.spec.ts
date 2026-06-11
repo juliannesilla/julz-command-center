@@ -172,6 +172,22 @@ test('footer tagline is the locked copy in bold', async ({ page }) => {
   await expect(tag).toHaveCSS('font-weight', '700');
 });
 
+test('subtitle stacks two lines on mobile too', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'mobile', 'mobile regression guard (D1)');
+  await expect(page.locator('.subtitle .sl')).toHaveCount(2);
+  await expect(page.locator('.subtitle .sl').first()).toHaveCSS('display', 'block');
+});
+
+test('auto-fit bails in review mode so comment pins stay accurate', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop', 'auto-fit is desktop-only');
+  await page.setViewportSize({ width: 1920, height: 940 });
+  await page.evaluate(() => localStorage.setItem('julz-review-mode', '1'));
+  await page.reload();
+  await expect(page.locator('.jrv-bar')).toBeVisible();
+  const zoom = await page.evaluate(() => document.body.style.zoom);
+  expect(zoom).toBe('');
+});
+
 test('review widget stays hidden publicly, appears with the sticky flag', async ({ page }) => {
   await expect(page.locator('.jrv-bar')).toHaveCount(0);
   await page.evaluate(() => localStorage.setItem('julz-review-mode', '1'));

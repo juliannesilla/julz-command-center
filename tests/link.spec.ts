@@ -87,8 +87,8 @@ test('hero uses the right crop and ratio per viewport', async ({ page }, testInf
 });
 
 test('tagline and hero CTA are locked', async ({ page }) => {
-  await expect(page.locator('.tagline')).toContainText('Director-level strategy.');
-  await expect(page.locator('.tagline')).toContainText('Creator-speed');
+  await expect(page.locator('.tagline')).toContainText(/Director[‑-]level strategy./); // copy locked; hyphen may be non-breaking U+2011
+  await expect(page.locator('.tagline')).toContainText(/Creator[‑-]speed/);
   const cta = page.locator('.cta');
   await expect(cta).toBeVisible();
   await expect(cta).toHaveAttribute('href', 'https://www.juliannesilla.com');
